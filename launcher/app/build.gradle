@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'la.launcheranywhere'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'la.launcheranywhere'
+        minSdk 26
+        targetSdk 34
+        versionCode 6
+        versionName '1.1.0'
+    }
+
+    buildTypes {
+        release {
+            // R8 strips and optimises the code (AndroidX included): smaller APK, faster start on a slow TV CPU.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Sideloaded over ADB, never published: sign with the debug key so it installs over a debug build.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+    // SMB client (discovery + share enumeration) for the built-in LAN file browser (SmbActivity).
+    implementation 'eu.agno3.jcifs:jcifs-ng:2.1.2'
+    // jcifs-ng logs through slf4j; a no-op binding keeps the APK quiet and satisfies R8.
+    implementation 'org.slf4j:slf4j-nop:1.7.36'
+    // Test only (never in the APK): plain JVM tests for the module card validators, src/test.
+    testImplementation 'junit:junit:4.13.2'
+}

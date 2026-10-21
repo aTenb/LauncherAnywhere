@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="420dp"
+    android:height="300dp"
+    android:viewportWidth="720"
+    android:viewportHeight="514">
+
+    <!-- 1. AMBIENT BACKLIGHT LINES & FRAMES (Restored around TV) -->
+    <path android:strokeColor="#2434C98B" android:strokeWidth="2.2" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 110,70 L 610,70 A 40,40 0 0,1 650,110 L 650,360 A 40,40 0 0,1 610,400 L 110,400 A 40,40 0 0,1 70,360 L 70,110 A 40,40 0 0,1 110,70 Z" />
+    <path android:strokeColor="#1834C98B" android:strokeWidth="1.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 112,84 L 608,84 A 24,24 0 0,1 632,108 L 632,362 A 24,24 0 0,1 608,386 L 112,386 A 24,24 0 0,1 88,362 L 88,108 A 24,24 0 0,1 112,84 Z" />
+    <path android:strokeColor="#2634C98B" android:strokeWidth="2.2" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 90,90 C 220,60 500,60 630,90" />
+    <path android:strokeColor="#1E34C98B" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 60,210 C 40,270 40,330 60,390" />
+    <path android:strokeColor="#1E34C98B" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 660,210 C 680,270 680,330 660,390" />
+    <group android:translateX="72" android:translateY="100" android:scaleX="0.85" android:scaleY="0.85">
+        <path android:strokeColor="#FF94A3B8" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 0,-14 C 0,-5 5,0 14,0 C 5,0 0,5 0,14 C 0,5 -5,0 -14,0 C -5,0 0,-5 0,-14 Z" />
+    </group>
+    <group android:translateX="648" android:translateY="85" android:scaleX="0.95" android:scaleY="0.95">
+        <path android:strokeColor="#FFCBD5E1" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 0,-14 C 0,-5 5,0 14,0 C 5,0 0,5 0,14 C 0,5 -5,0 -14,0 C -5,0 0,-5 0,-14 Z" />
+    </group>
+    <path android:fillColor="#FFCBD5E1" android:pathData="M 662.5,260 A 2.5,2.5 0 1,0 667.5,260 A 2.5,2.5 0 1,0 662.5,260 Z" />
+    <group android:translateX="66" android:translateY="360" android:scaleX="0.7" android:scaleY="0.7">
+        <path android:strokeColor="#FF94A3B8" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 0,-14 C 0,-5 5,0 14,0 C 5,0 0,5 0,14 C 0,5 -5,0 -14,0 C -5,0 0,-5 0,-14 Z" />
+    </group>
+    <path android:fillColor="#FF94A3B8" android:pathData="M 650.0,380 A 2.0,2.0 0 1,0 654.0,380 A 2.0,2.0 0 1,0 650.0,380 Z" />
+
+    <!-- 2. SONY BRAVIA HARDWARE SILHOUETTE -->
+    <path android:fillColor="#FF94A3B8" android:strokeColor="#FFCBD5E1" android:strokeWidth="1.2" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 182,396 L 114,427 L 114,435 L 178,410 L 184,418 L 193,418 L 190,396 Z" />
+    <path android:strokeColor="#FFCBD5E1" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 114,431 L 179,405 L 187,418" />
+    <path android:fillColor="#FF94A3B8" android:strokeColor="#FFCBD5E1" android:strokeWidth="1.2" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 538,396 L 606,427 L 606,435 L 542,410 L 536,418 L 527,418 L 530,396 Z" />
+    <path android:strokeColor="#FFCBD5E1" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 606,431 L 541,405 L 533,418" />
+    <path android:strokeColor="#40CBD5E1" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 104,437 L 130,437" />
+    <path android:strokeColor="#40CBD5E1" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 590,437 L 616,437" />
+    <path android:fillColor="#FFD1D5DB" android:strokeColor="#FF94A3B8" android:strokeWidth="1" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 103,100 L 617,100 A 3,3 0 0,1 620,103 L 620,393 A 3,3 0 0,1 617,396 L 103,396 A 3,3 0 0,1 100,393 L 100,103 A 3,3 0 0,1 103,100 Z" />
+    <path android:fillColor="#FF94A3B8" android:pathData="M 102,385 L 618,385 A 1,1 0 0,1 619,386 L 619,395 A 1,1 0 0,1 618,396 L 102,396 A 1,1 0 0,1 101,395 L 101,386 A 1,1 0 0,1 102,385 Z" />
+    <path android:strokeColor="#FFE2E8F0" android:strokeWidth="1.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 102,385 L 618,385" />
+    <path android:fillColor="#FFD1D5DB" android:pathData="M 322,396 L 398,396 L 395,402 L 325,402 Z" />
+    <!-- Authentic SONY Logo on Bezel -->
+    <path android:strokeColor="#FF1C1C1E" android:strokeWidth="1.1" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 353.5,389.5 C 353,388.6 351.8,388.2 350.5,388.5 C 349.2,388.8 348.5,389.7 348.5,390.6 C 348.5,392.2 353.5,391.6 353.5,393.2 C 353.5,394.2 352.5,394.8 351,394.8 C 349.5,394.8 348.5,394.1 348,393.2" />
+    <path android:strokeColor="#FF1C1C1E" android:strokeWidth="1.1" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 357,388.5 C 359,388.5 360,389.8 360,391.5 C 360,393.2 359,394.5 357,394.5 C 355,394.5 354,393.2 354,391.5 C 354,389.8 355,388.5 357,388.5 Z" />
+    <path android:strokeColor="#FF1C1C1E" android:strokeWidth="1.1" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 361.5,394.5 L 361.5,388.5 L 365.5,394.5 L 365.5,388.5" />
+    <path android:strokeColor="#FF1C1C1E" android:strokeWidth="1.1" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 367,388.5 L 369,391.5 L 369,394.5 M 371,388.5 L 369,391.5" />
+
+    <!-- 3. TV SCREEN SURFACE & "android" WORDMARK -->
+    <path android:fillColor="#FF0D1117" android:strokeColor="#FF05070A" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 107,106 L 613,106 A 1,1 0 0,1 614,107 L 614,384 A 1,1 0 0,1 613,385 L 107,385 A 1,1 0 0,1 106,384 L 106,107 A 1,1 0 0,1 107,106 Z" />
+    <!-- Crisp "android" vector wordmark in #FF34C98B -->
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 295.0,245.5 A 8.0,8.0 0 1,0 311.0,245.5 A 8.0,8.0 0 1,0 295.0,245.5 Z" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 311,237.5 L 311,253.5" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 322,253.5 L 322,237.5" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 322,243.5 C 322,236.5 335,236.5 335,243.5 L 335,253.5" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 339.0,245.5 A 8.0,8.0 0 1,0 355.0,245.5 A 8.0,8.0 0 1,0 339.0,245.5 Z" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 355,227.5 L 355,253.5" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 366,253.5 L 366,237.5" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 366,243.5 C 367,237.5 373,236.5 376,239.5" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 379.0,245.5 A 8.0,8.0 0 1,0 395.0,245.5 A 8.0,8.0 0 1,0 379.0,245.5 Z" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 403,237.5 L 403,253.5" />
+    <path android:fillColor="#FF34C98B" android:pathData="M 401.2,232.0 A 1.8,1.8 0 1,0 404.8,232.0 A 1.8,1.8 0 1,0 401.2,232.0 Z" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 411.0,245.5 A 8.0,8.0 0 1,0 427.0,245.5 A 8.0,8.0 0 1,0 411.0,245.5 Z" />
+    <path android:strokeColor="#FF34C98B" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:pathData="M 427,227.5 L 427,253.5" />
+    <path android:fillColor="#05FFFFFF" android:pathData="M 106,106 L 280,106 L 106,280 Z" />
+</vector>

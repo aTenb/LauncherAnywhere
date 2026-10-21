@@ -1,0 +1,25 @@
+# Development & testing scripts
+*.py
+tests/
+tools/*.py
+__pycache__/
+*.pyc
+
+# Local environments, keys, and TV dumps
+tools/venv/
+tools/adbkey/
+backup/
+.DS_Store
+
+# Android build outputs & local config
+launcher/.gradle/
+launcher/build/
+launcher/app/build/
+launcher/local.properties
+launcher/hs_err_pid*.log
+launcher/replay_pid*.log
+
+# Generated install bundles
+*.apk
+*.aab
+*.zip

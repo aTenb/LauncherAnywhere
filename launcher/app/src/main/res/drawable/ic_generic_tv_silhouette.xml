@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="420dp"
+    android:height="300dp"
+    android:viewportWidth="720"
+    android:viewportHeight="514">
+
+    <!-- Scaled Generic TV: Configured to 2.0x scale as requested -->
+    <group
+        android:pivotX="130"
+        android:pivotY="86"
+        android:scaleX="2.0"
+        android:scaleY="2.0"
+        android:translateX="230"
+        android:translateY="174">
+
+        <!-- TV Stand (Slim blade feet) -->
+        <!-- Left foot -->
+        <path
+            android:fillColor="#FF2E3846"
+            android:pathData="M38,144 L32,162 L42,162 L48,144 Z" />
+        <path
+            android:fillColor="#FF5C6B7E"
+            android:pathData="M30,161 L44,161 L43,163 L29,163 Z" />
+
+        <!-- Right foot -->
+        <path
+            android:fillColor="#FF2E3846"
+            android:pathData="M222,144 L228,162 L218,162 L212,144 Z" />
+        <path
+            android:fillColor="#FF5C6B7E"
+            android:pathData="M230,161 L216,161 L217,163 L231,163 Z" />
+
+        <!-- TV Outer Bezel Frame -->
+        <path
+            android:fillColor="#FF1E2530"
+            android:pathData="M15,16 C15,12 18,9 22,9 L238,9 C242,9 245,12 245,16 L245,142 C245,146 242,148 238,148 L22,148 C18,148 15,146 15,142 Z" />
+
+        <!-- Screen Bezel Outer Stroke -->
+        <path
+            android:strokeColor="#FF384556"
+            android:strokeWidth="1.5"
+            android:pathData="M15,16 C15,12 18,9 22,9 L238,9 C242,9 245,12 245,16 L245,142 C245,146 242,148 238,148 L22,148 C18,148 15,146 15,142 Z" />
+
+        <!-- Inner Screen Display Area -->
+        <path
+            android:fillColor="#FF0F131A"
+            android:pathData="M18,12 L242,12 L242,143 L18,143 Z" />
+
+        <!-- Subtle screen ambient glow / gradient aura -->
+        <path
+            android:fillColor="#1F34C98B"
+            android:pathData="M50,40 C100,20 160,20 210,40 C230,80 230,110 200,135 L60,135 C30,110 30,80 50,40 Z" />
+
+        <!-- Screen graphic: Clean tvOS-style launcher preview mini cards -->
+        <path
+            android:fillColor="#26FFFFFF"
+            android:pathData="M32,108 L62,108 C64,108 66,110 66,112 L66,132 C66,134 64,136 62,136 L32,136 C30,136 28,134 28,132 L28,112 C28,110 30,108 32,108 Z" />
+        <path
+            android:fillColor="#3D34C98B"
+            android:pathData="M74,106 L108,106 C110,106 112,108 112,110 L112,134 C112,136 110,138 108,138 L74,138 C72,138 70,136 70,134 L70,110 C70,108 72,106 74,106 Z" />
+        <path
+            android:strokeColor="#FF34C98B"
+            android:strokeWidth="1.5"
+            android:pathData="M74,106 L108,106 C110,106 112,108 112,110 L112,134 C112,136 110,138 108,138 L74,138 C72,138 70,136 70,134 L70,110 C70,108 72,106 74,106 Z" />
+        <path
+            android:fillColor="#26FFFFFF"
+            android:pathData="M120,108 L150,108 C152,108 154,110 154,112 L154,132 C154,134 152,136 150,136 L120,136 C118,136 116,134 116,132 L116,112 C116,110 118,108 120,108 Z" />
+        <path
+            android:fillColor="#26FFFFFF"
+            android:pathData="M162,108 L192,108 C194,108 196,110 196,112 L196,132 C196,134 194,136 192,136 L162,136 C160,136 158,134 158,132 L158,112 C158,110 160,108 162,108 Z" />
+        <path
+            android:fillColor="#26FFFFFF"
+            android:pathData="M204,108 L232,108 C233,108 234,110 234,112 L234,132 C234,134 233,136 232,136 L204,136 C203,136 202,134 202,132 L202,112 C202,110 203,108 204,108 Z" />
+
+        <!-- Screen Clock Preview on top left -->
+        <path
+            android:fillColor="#E6FFFFFF"
+            android:pathData="M32,24 L48,24 L48,27 L32,27 Z M32,30 L44,30 L44,33 L32,33 Z" />
+
+        <!-- Status LED at bottom center bezel -->
+        <path
+            android:fillColor="#FF34C98B"
+            android:pathData="M126,145 L134,145 L134,146.5 L126,146.5 Z" />
+    </group>
+</vector>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0C0F14"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingStart="44dp"
+    android:paddingEnd="44dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp">
+
+    <!-- Top Left Title (Returned to top-left position like previous version) -->
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/launcher_settings"
+        android:textColor="#FFFFFFFF"
+        android:textSize="28sp"
+        android:fontFamily="@font/outfit_light"
+        android:letterSpacing="-0.02" />
+
+    <!-- Main Content: Left Inspector Pane + Right Settings Menu Pane -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- Left Pane: 2 Separate Containers (Container 1: Maximized TV Image, Container 2: Bottom Description) -->
+        <RelativeLayout
+            android:id="@+id/leftInspectorPane"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:paddingStart="4dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="6dp"
+            android:clipChildren="false">
+
+            <!-- Container 1: Sony TV Artwork (Dimensionally fixed, immune to description text line count changes) -->
+            <FrameLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/descContainer"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:clipChildren="false">
+
+                <ImageView
+                    android:id="@+id/ivTvSilhouette"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:translationY="10dp"
+                    android:src="@drawable/ic_generic_tv_silhouette"
+                    android:contentDescription="Sony TV Silhouette" />
+            </FrameLayout>
+
+            <!-- Container 2: Description Container (Fixed 76dp height, adjusted downwards) -->
+            <FrameLayout
+                android:id="@+id/descContainer"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <TextView
+                    android:id="@+id/tvInspectorDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center_horizontal"
+                    android:text="@string/columns_hint"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/outfit_regular" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <!-- Right Pane: Scrollable tvOS Settings Menu -->
+        <ScrollView
+            android:id="@+id/rightMenuScroll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingBottom="24dp">
+
+                <!-- Section 1: 桌面与顶栏 (Moved to top of right pane) -->
+                <TextView
+                    style="@style/SettingsCategoryTitle"
+                    android:text="@string/settings_category_desktop" />
+
+                <!-- Columns Row (Unified tvOS single-row interaction) -->
+                <LinearLayout
+                    android:id="@+id/rowColumns"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/columns_label" />
+
+                    <TextView
+                        android:id="@+id/columnsBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_action_bg"
+                        android:textColor="@color/tvos_badge_action_color"
+                        android:text="‹&#160;&#160;&#160;6&#160;&#160;&#160;›" />
+                </LinearLayout>
+
+                <!-- Row: 顶栏局域网入口 -->
+                <LinearLayout
+                    android:id="@+id/rowSmb"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/show_top_smb" />
+
+                    <TextView
+                        android:id="@+id/smbBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_on_bg"
+                        android:textColor="@color/tvos_badge_on_color"
+                        android:text="@string/on" />
+                </LinearLayout>
+
+                <!-- Row: 顶栏文字标签 -->
+                <LinearLayout
+                    android:id="@+id/rowTopBarLabels"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/top_bar_labels_title" />
+
+                    <TextView
+                        android:id="@+id/topBarLabelsBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_off_bg"
+                        android:textColor="@color/tvos_badge_off_color"
+                        android:text="@string/off" />
+                </LinearLayout>
+
+                <!-- Row: 底部应用库入口 -->
+                <LinearLayout
+                    android:id="@+id/rowAppLibrary"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/app_library_title" />
+
+                    <TextView
+                        android:id="@+id/appLibraryBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_off_bg"
+                        android:textColor="@color/tvos_badge_off_color"
+                        android:text="@string/off" />
+                </LinearLayout>
+
+                <!-- Row: 系统状态监控 -->
+                <LinearLayout
+                    android:id="@+id/rowShowStats"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/show_stats_title" />
+
+                    <TextView
+                        android:id="@+id/showStatsBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_off_bg"
+                        android:textColor="@color/tvos_badge_off_color"
+                        android:text="@string/off" />
+                </LinearLayout>
+
+                <!-- Section 2: 动效与主题 -->
+                <TextView
+                    style="@style/SettingsCategoryTitle"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/settings_category_effects" />
+
+                <!-- Row: 界面转场动画 -->
+                <LinearLayout
+                    android:id="@+id/rowAnimations"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/animations_title" />
+
+                    <TextView
+                        android:id="@+id/animationsBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_on_bg"
+                        android:textColor="@color/tvos_badge_on_color"
+                        android:text="@string/on" />
+                </LinearLayout>
+
+                <!-- Row: 高级视觉特效 -->
+                <LinearLayout
+                    android:id="@+id/rowAdvanced"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/advanced_effects_title" />
+
+                    <TextView
+                        android:id="@+id/advancedBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_off_bg"
+                        android:textColor="@color/tvos_badge_off_color"
+                        android:text="@string/off" />
+                </LinearLayout>
+
+                <!-- Row: 焦点放大率 (Focus Scale) -->
+                <LinearLayout
+                    android:id="@+id/rowFocusScale"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/focus_scale_title" />
+
+                    <TextView
+                        android:id="@+id/focusScaleBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_action_bg"
+                        android:textColor="@color/tvos_badge_action_color"
+                        android:text="‹&#160;&#160;&#160;1.10&#160;&#160;&#160;›" />
+                </LinearLayout>
+
+                <!-- Row: 索尼电视主题 -->
+                <LinearLayout
+                    android:id="@+id/rowSonyTheme"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/sony_theme_title" />
+
+                    <TextView
+                        android:id="@+id/sonyThemeBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_off_bg"
+                        android:textColor="@color/tvos_badge_off_color"
+                        android:text="@string/off" />
+                </LinearLayout>
+
+                <!-- Section 3: 系统快捷与偏好 -->
+                <TextView
+                    style="@style/SettingsCategoryTitle"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/settings_category_system" />
+
+                <!-- Row: 设置键快捷面板 -->
+                <LinearLayout
+                    android:id="@+id/rowSettingsKeyPanel"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/settings_key_panel_title" />
+
+                    <TextView
+                        android:id="@+id/settingsKeyPanelBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_off_bg"
+                        android:textColor="@color/tvos_badge_off_color"
+                        android:text="@string/off" />
+                </LinearLayout>
+
+                <!-- Row: 设为默认桌面 -->
+                <LinearLayout
+                    android:id="@+id/rowDefaultHome"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/home_settings" />
+
+                    <TextView
+                        android:id="@+id/defaultHomeBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_action_bg"
+                        android:textColor="@color/tvos_badge_action_color"
+                        android:text="@string/action_open" />
+                </LinearLayout>
+
+                <!-- Row: 电视系统设置 -->
+                <LinearLayout
+                    android:id="@+id/rowTvSettings"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/tv_settings" />
+
+                    <TextView
+                        android:id="@+id/tvSettingsBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_action_bg"
+                        android:textColor="@color/tvos_badge_action_color"
+                        android:text="@string/action_open" />
+                </LinearLayout>
+
+                <!-- Row: 重置设置 (位于电视系统设置下方) -->
+                <LinearLayout
+                    android:id="@+id/rowFollowTheme"
+                    style="@style/TvosSettingsRow">
+
+                    <TextView
+                        style="@style/TvosItemTitle"
+                        android:text="@string/follow_theme" />
+
+                    <TextView
+                        android:id="@+id/followThemeBadge"
+                        style="@style/TvosItemBadge"
+                        android:background="@drawable/tvos_badge_action_bg"
+                        android:textColor="@color/tvos_badge_action_color"
+                        android:text="@string/action_reset" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
