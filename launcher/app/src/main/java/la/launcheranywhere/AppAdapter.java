@@ -462,11 +462,17 @@ public class AppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (e.kind == Entry.HOME_SETTINGS) {
             ctx.startActivity(new Intent(ctx, HomeSettingsActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            if (ctx instanceof Activity) {
+                ((Activity) ctx).overridePendingTransition(R.anim.app_open_enter, R.anim.app_open_exit);
+            }
             return;
         }
         if (e.kind == Entry.SMB) {
             ctx.startActivity(new Intent(ctx, SmbActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            if (ctx instanceof Activity) {
+                ((Activity) ctx).overridePendingTransition(R.anim.app_open_enter, R.anim.app_open_exit);
+            }
             return;
         }
         Intent i = new Intent(Intent.ACTION_MAIN)
@@ -477,7 +483,7 @@ public class AppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (leanbackPackages.contains(e.pkg)) i.addCategory(Intent.CATEGORY_LEANBACK_LAUNCHER);
         try {
             ctx.startActivity(i);
-            if (advancedEffects && ctx instanceof Activity) {
+            if (ctx instanceof Activity) {
                 ((Activity) ctx).overridePendingTransition(R.anim.app_open_enter, R.anim.app_open_exit);
             }
         } catch (Exception ex) {

@@ -408,7 +408,10 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
         btnSmb = findViewById(R.id.btnSmb);
         View btnSettings = findViewById(R.id.btnSettings);
-        btnSmb.setOnClickListener(v -> startActivity(new Intent(this, SmbActivity.class)));
+        btnSmb.setOnClickListener(v -> {
+            startActivity(new Intent(this, SmbActivity.class));
+            overridePendingTransition(R.anim.app_open_enter, R.anim.app_open_exit);
+        });
         btnSmb.setVisibility(cfg.showSmb ? View.VISIBLE : View.GONE);
         btnWifi.setOnClickListener(v -> openNetworkPill());
         btnWifi.setOnLongClickListener(v -> {
@@ -482,6 +485,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (intent == null || !ACTION_LAUNCHER_SETTINGS.equals(intent.getAction())) return false;
         setIntent(new Intent(Intent.ACTION_MAIN));
         startActivityForResult(new Intent(this, LauncherSettingsActivity.class), LAUNCHER_SETTINGS_REQUEST);
+        overridePendingTransition(R.anim.app_open_enter, R.anim.app_open_exit);
         return true;
     }
 
@@ -1684,6 +1688,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         try {
             startActivity(i);
+            overridePendingTransition(R.anim.app_open_enter, R.anim.app_open_exit);
         } catch (ActivityNotFoundException e) {
             Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
         }
